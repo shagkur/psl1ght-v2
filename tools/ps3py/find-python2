@@ -1,0 +1,7 @@
+#! /bin/sh
+for python in python2.7 python2.6 python2 python; do
+  if "$python" -V >/dev/null 2>&1; then
+    break
+  fi
+done
+echo "$python"
