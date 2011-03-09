@@ -1,0 +1,12 @@
+export PATH	:=	$(PSL1GHT)/host/bin:$(PSL1GHT)/host/spu/bin:$(PATH)
+
+export PSL1GHT_INC	:=	-I$(PSL1GHT)/target/spu/include -I$(PSL1GHT)/target/spu/include/simdmath
+export PSL1GHT_LIB	:=	-L$(PSL1GHT)/target/spu/lib
+
+PREFIX	:=	spu-
+
+MACHDEP =
+
+include $(PSL1GHT)/host/base_rules
+
+#---------------------------------------------------------------------------------

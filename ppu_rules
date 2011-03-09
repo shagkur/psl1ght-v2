@@ -1,0 +1,35 @@
+export PATH	:=	$(PSL1GHT)/host/bin:$(PSL1GHT)/host/ppu/bin:$(PATH)
+
+export PSL1GHT_INC	:=	-I$(PSL1GHT)/target/ppu/include -I$(PSL1GHT)/target/ppu/include/simdmath
+export PSL1GHT_LIB	:=	-L$(PSL1GHT)/target/ppu/lib
+
+PREFIX	:=	ppu-
+
+MACHDEP =  -mhard-float -fmodulo-sched -ffunction-sections -fdata-sections
+
+include $(PSL1GHT)/host/base_rules
+
+PKG		:=	pkg.py
+SFO		:=	sfo.py
+SPRX	:=	sprxlinker$(POSTFIX)
+FSELF	:=	fself.py
+CGCOMP	:=	cgcomp$(POSTFIX)
+
+#---------------------------------------------------------------------------------
+%.self: %.elf
+	@echo output ... $(notdir $@)
+	@$(STRIP) $< -o $<
+	@$(SPRX) $<
+	@$(FSELF) $< $@
+
+%.vpo: %.vcg
+	@echo $(notdir $<)
+	@$(CGCOMP) -v $^ $@
+	
+%.fpo: %.fcg
+	@echo $(notdir $<)
+	@$(CGCOMP) -f $^ $@
+
+%.pkg: %.self
+	@echo building pkg ... $(notdir $@)
+	
