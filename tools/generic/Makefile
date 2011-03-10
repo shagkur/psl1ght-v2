@@ -15,8 +15,8 @@ ifneq (,$(findstring MINGW,$(shell uname -s)))
 	exeext		:= .exe
 endif
 
-ifneq (,$(findstring Linux,$(shell uname -s)))
-	CFLAGS += -static
+ifneq (,$(findstring CYGWIN,$(UNAME)))
+	exeext		:= .exe
 endif
 
 ifneq (,$(findstring Darwin,$(shell uname -s)))
@@ -32,9 +32,6 @@ all:	$(tools)
 
 clean:
 	@rm -f $(tools)
-
-gbfs$(exeext)	:	gbfs.c
-	$(CC) $< -o $@ $(CFLAGS) -liberty
 
 %$(exeext)	:: %.c
 	$(CC) $< -o $@ $(CFLAGS)
