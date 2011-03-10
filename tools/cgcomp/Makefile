@@ -48,7 +48,7 @@ ifneq (,$(findstring Darwin,$(UNAME)))
 endif
 
 ifneq (,$(findstring Linux,$(UNAME)))
-	LDFLAGS += -ldl
+	LDFLAGS += -ldl -lpthread
 	OS := Linux
 	EXTRAINSTALL := extlib/libCg.so
 endif
