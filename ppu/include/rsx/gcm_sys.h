@@ -190,6 +190,31 @@
 #define GCM_SHADE_MODEL_FLAT					0x1D00
 #define GCM_SHADE_MODEL_SMOOTH					0x1D01
 
+#define GCM_ZERO								0
+#define GCM_ONE									1
+#define GCM_SRC_COLOR							0x0300
+#define GCM_ONE_MINUS_SRC_COLOR					0x0301
+#define GCM_SRC_ALPHA							0x0302
+#define GCM_ONE_MINUS_SRC_ALPHA					0x0303
+#define GCM_DST_ALPHA							0x0304
+#define GCM_ONE_MINUS_DST_ALPHA					0x0305
+#define GCM_DST_COLOR							0x0306
+#define GCM_ONE_MINUS_DST_COLOR					0x0307
+#define GCM_SRC_ALPHA_SATURATE					0x0308
+#define GCM_CONSTANT_COLOR						0x8001
+#define GCM_ONE_MINUS_CONSTANT_COLOR			0x8002
+#define GCM_CONSTANT_ALPHA						0x8003
+#define GCM_ONE_MINUS_CONSTANT_ALPHA			0x8004
+
+#define GCM_FUNC_ADD							0x8006
+#define GCM_MIN									0x8007
+#define GCM_MAX									0x8008
+#define GCM_FUNC_SUBTRACT						0x800a
+#define GCM_FUNC_REVERSE_SUBTRACT				0x800b
+#define GCM_FUNC_REVERSE_SUBTRACT_SIGNED		0xf005
+#define GCM_FUNC_ADD_SIGNED						0xf006
+#define GCM_FUNC_REVERSE_ADD_SIGNED				0xf007
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -270,7 +295,7 @@ u32* gcmGetLabelAddress(const u8 index);
 void gcmResetFlipStatus();
 void gcmSetFlipMode(s32 mode);
 void gcmSetWaitFlip(gcmContextData *context);
-void gcmSetVBlankHander(void (*handler)(const u32 head));
+void gcmSetVBlankHandler(void (*handler)(const u32 head));
 void gcmSetFlipHandler(void (*handler)(const u32 head));
 void gcmSetGraphicsHandler(void (*handler)(const u32 val));
 void gcmSetDefaultCommandBuffer();
