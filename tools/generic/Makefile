@@ -31,13 +31,14 @@ tools	:=	$(patsubst %.c,%$(exeext),$(wildcard *.c)) \
 all:	$(tools)
 
 clean:
+	@echo clean ...
 	@rm -f $(tools)
 
 %$(exeext)	:: %.c
-	$(CC) $< -o $@ $(CFLAGS)
+	@$(CC) $< -o $@ $(CFLAGS)
 
 %$(exeext)	:: %.cpp
-	$(CXX) $< -o $@ $(CFLAGS)
+	@$(CXX) $< -o $@ $(CFLAGS)
 
 install:
 	@[ -d $(PSL1GHT)/host/bin ] || mkdir -p $(PSL1GHT)/host/bin

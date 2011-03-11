@@ -125,7 +125,7 @@ DEPENDS	:=	$(OFILES:.o=.d)
 #---------------------------------------------------------------------------------
 $(OUTPUT): $(DFILES) $(OFILES)
 	@echo linking ... $(notdir $@)
-	$(LD) $(LDFLAGS) $^ $(LIBPATHS) $(LIBS) -o $@
+	@$(LD) $(LDFLAGS) $^ $(LIBPATHS) $(LIBS) -o $@
 
 #---------------------------------------------------------------------------------
 # Compile Targets for C/C++
@@ -134,14 +134,14 @@ $(OUTPUT): $(DFILES) $(OFILES)
 #---------------------------------------------------------------------------------
 %.o : %.cpp
 	@echo $(notdir $<)
-	$(CXX) -E -MMD $(CXXFLAGS) $< > /dev/null
-	$(CXX) $(OSXCXXFLAGS) $(CXXFLAGS) -o $@ -c $<
+	@$(CXX) -E -MMD $(CXXFLAGS) $< > /dev/null
+	@$(CXX) $(OSXCXXFLAGS) $(CXXFLAGS) -o $@ -c $<
 
 #---------------------------------------------------------------------------------
 %.o : %.c
 	@echo $(notdir $<)
-	$(CC) -E -MMD $(CFLAGS) $< > /dev/null
-	$(CC) $(OSXCFLAGS) $(CFLAGS) -o $@ -c $<
+	@$(CC) -E -MMD $(CFLAGS) $< > /dev/null
+	@$(CC) $(OSXCFLAGS) $(CFLAGS) -o $@ -c $<
 
 
 

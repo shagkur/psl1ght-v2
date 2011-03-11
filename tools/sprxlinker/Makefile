@@ -39,5 +39,6 @@ clean:
 	rm -rf $(TARGET)
 	
 $(TARGET):	$(CFILES)
-			$(CC) $(CFLAGS) $(INCLUDES) $< -o $@ $(LDFLAGS)
+			@echo building ... $(notdir $@)
+			@$(CC) $(CFLAGS) $(INCLUDES) $< -o $@ $(LDFLAGS)
 			

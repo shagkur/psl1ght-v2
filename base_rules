@@ -46,7 +46,7 @@ endif
 #---------------------------------------------------------------------------------
 %.o: %.c
 	@echo $(notdir $<)
-	$(CC) $(DEPSOPT) $(CFLAGS) -c $< -o $@ $(ERROR_FILTER)
+	@$(CC) $(DEPSOPT) $(CFLAGS) -c $< -o $@ $(ERROR_FILTER)
 
 #---------------------------------------------------------------------------------
 %.o: %.m
@@ -61,7 +61,7 @@ endif
 #---------------------------------------------------------------------------------
 %.o: %.S
 	@echo $(notdir $<)
-	$(CC) $(DEPSOPT) -x assembler-with-cpp $(ASFLAGS) -c $< -o $@ $(ERROR_FILTER)
+	@$(CC) $(DEPSOPT) -x assembler-with-cpp $(ASFLAGS) -c $< -o $@ $(ERROR_FILTER)
 
 #---------------------------------------------------------------------------------
 # canned command sequence for binary data
