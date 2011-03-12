@@ -3,8 +3,8 @@
 #---------------------------------------------------------------------------------
 .SUFFIXES:
 #---------------------------------------------------------------------------------
-ifeq ($(strip $(PSL1GHT)),)
-$(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
+ifeq ($(strip $(DEVKITPS3)),)
+$(error "Please set DEVKITPS3 in your environment. export DEVKITPS3=<path>")
 endif
 
 UNAME	:=	$(shell uname -s)
@@ -32,8 +32,8 @@ INCLUDES	:= $(foreach dir,$(INCLUDE),-I$(dir))
 all: $(TARGET)
 
 install:
-	@[ -d $(PSL1GHT)/bin ] || mkdir -p $(PSL1GHT)/bin
-	@cp -frv $(TARGET) $(PSL1GHT)/bin
+	@[ -d $(DEVKITPS3)/bin ] || mkdir -p $(DEVKITPS3)/bin
+	@cp -frv $(TARGET) $(DEVKITPS3)/bin
 	
 clean:
 	rm -rf $(TARGET)

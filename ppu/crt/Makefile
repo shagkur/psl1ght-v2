@@ -3,11 +3,11 @@
 #---------------------------------------------------------------------------------
 .SUFFIXES:
 #---------------------------------------------------------------------------------
-ifeq ($(strip $(PSL1GHT)),)
-$(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
+ifeq ($(strip $(DEVKITPS3)),)
+$(error "Please set DEVKITPS3 in your environment. export DEVKITPS3=<path>")
 endif
 
-include	$(PSL1GHT)/ppu/ppu_rules
+include	$(DEVKITPS3)/ppu_rules
 
 BUILD		:=	build
 
@@ -55,8 +55,8 @@ ppu:
 #---------------------------------------------------------------------------------
 install:
 #---------------------------------------------------------------------------------
-	@cp -frv $(CURDIR)/ppu/lv2-*.o $(PSL1GHT)/ppu/ppu/lib
-	@cp -frv $(CURDIR)/lv2.ld $(PSL1GHT)/ppu/ppu/lib
+	@cp -frv $(CURDIR)/ppu/lv2-*.o $(DEVKITPS3)/ppu/ppu/lib
+	@cp -frv $(CURDIR)/lv2.ld $(DEVKITPS3)/ppu/ppu/lib
 	
 .PHONY: crts ppu install
 

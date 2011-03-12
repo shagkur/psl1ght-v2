@@ -3,8 +3,8 @@
 #---------------------------------------------------------------------------------
 .SUFFIXES:
 #---------------------------------------------------------------------------------
-ifeq ($(strip $(PSL1GHT)),)
-$(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
+ifeq ($(strip $(DEVKITPS3)),)
+$(error "Please set DEVKITPS3 in your environment. export DEVKITPS3=<path>")
 endif
 
 CC	:=	gcc
@@ -41,5 +41,5 @@ clean:
 	@$(CXX) $< -o $@ $(CFLAGS)
 
 install:
-	@[ -d $(PSL1GHT)/bin ] || mkdir -p $(PSL1GHT)/bin
-	@cp -frv $(CURDIR)/$(tools) $(PSL1GHT)/bin
+	@[ -d $(DEVKITPS3)/bin ] || mkdir -p $(DEVKITPS3)/bin
+	@cp -frv $(CURDIR)/$(tools) $(DEVKITPS3)/bin

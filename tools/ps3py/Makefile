@@ -16,5 +16,5 @@ clean:
 	rm -rf build pkgcrypt.*
 
 install:
-	@cp -frv ICON0.PNG sfo.xml pkgcrypt.* $(PSL1GHT)/bin/
-	@./install-scripts $(PSL1GHT)/bin/ fself.py Struct.py sfo.py pkg.py
+	@cp -frv ICON0.PNG sfo.xml pkgcrypt.* $(DEVKITPS3)/bin/
+	@./install-scripts $(DEVKITPS3)/bin/ fself.py Struct.py sfo.py pkg.py

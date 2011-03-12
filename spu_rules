@@ -1,12 +1,12 @@
-export PATH	:=	$(PSL1GHT)/bin:$(PSL1GHT)/spu/bin:$(PATH)
+export PATH	:=	$(DEVKITPS3)/bin:$(DEVKITPS3)/spu/bin:$(PATH)
 
-export PSL1GHT_INC	:=	-I$(PSL1GHT)/spu/include -I$(PSL1GHT)/spu/include/simdmath
-export PSL1GHT_LIB	:=	-L$(PSL1GHT)/spu/lib
+export DEVKITPS3_INC	:=	-I$(DEVKITPS3)/spu/include -I$(DEVKITPS3)/spu/include/simdmath
+export DEVKITPS3_LIB	:=	-L$(DEVKITPS3)/spu/lib
 
 PREFIX	:=	spu-
 
 MACHDEP =
 
-include $(PSL1GHT)/base_rules
+include $(DEVKITPS3)/base_rules
 
 #---------------------------------------------------------------------------------

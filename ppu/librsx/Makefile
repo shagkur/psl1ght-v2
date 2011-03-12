@@ -3,11 +3,11 @@
 #---------------------------------------------------------------------------------
 .SUFFIXES:
 #---------------------------------------------------------------------------------
-ifeq ($(strip $(PSL1GHT)),)
-$(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
+ifeq ($(strip $(DEVKITPS3)),)
+$(error "Please set DEVKITPS3 in your environment. export DEVKITPS3=<path>")
 endif
 
-include	$(PSL1GHT)/ppu/ppu_rules
+include	$(DEVKITPS3)/ppu_rules
 
 BUILD		:=	build
 
@@ -58,8 +58,8 @@ ppu:
 #---------------------------------------------------------------------------------
 install:
 #---------------------------------------------------------------------------------
-	@[ -d $(PSL1GHT)/ppu/lib ] || mkdir -p $(PSL1GHT)/ppu/lib
-	@cp -frv $(CURDIR)/lib/ppu/*.a $(PSL1GHT)/ppu/lib
+	@[ -d $(DEVKITPS3)/ppu/lib ] || mkdir -p $(DEVKITPS3)/ppu/lib
+	@cp -frv $(CURDIR)/lib/ppu/*.a $(DEVKITPS3)/ppu/lib
 
 #---------------------------------------------------------------------------------
 $(LIBRARY).a: $(OBJS)	

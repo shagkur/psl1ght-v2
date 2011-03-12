@@ -1,13 +1,13 @@
-export PATH	:=	$(PSL1GHT)/bin:$(PSL1GHT)/ppu/bin:$(PATH)
+export PATH	:=	$(DEVKITPS3)/bin:$(DEVKITPS3)/ppu/bin:$(PATH)
 
-export PSL1GHT_INC	:=	-I$(PSL1GHT)/ppu/include -I$(PSL1GHT)/ppu/include/simdmath
-export PSL1GHT_LIB	:=	-L$(PSL1GHT)/ppu/lib
+export DEVKITPS3_INC	:=	-I$(DEVKITPS3)/ppu/include -I$(DEVKITPS3)/ppu/include/simdmath
+export DEVKITPS3_LIB	:=	-L$(DEVKITPS3)/ppu/lib
 
 PREFIX	:=	ppu-
 
 MACHDEP =  -mhard-float -fmodulo-sched -ffunction-sections -fdata-sections
 
-include $(PSL1GHT)/base_rules
+include $(DEVKITPS3)/base_rules
 
 PKG		:=	pkg.py
 SFO		:=	sfo.py

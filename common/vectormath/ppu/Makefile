@@ -3,16 +3,16 @@
 #---------------------------------------------------------------------------------
 .SUFFIXES:
 #---------------------------------------------------------------------------------
-ifeq ($(strip $(PSL1GHT)),)
-$(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
+ifeq ($(strip $(DEVKITPS3)),)
+$(error "Please set DEVKITPS3 in your environment. export DEVKITPS3=<path>")
 endif
 
 all:
 	
 install:
-	@[ -d $(PSL1GHT)/ppu/include/vectormath ] || mkdir -p $(PSL1GHT)/ppu/include/vectormath
-	@cp -frv $(CURDIR)/c $(PSL1GHT)/ppu/include/vectormath
-	@cp -frv $(CURDIR)/cpp $(PSL1GHT)/ppu/include/vectormath
+	@[ -d $(DEVKITPS3)/ppu/include/vectormath ] || mkdir -p $(DEVKITPS3)/ppu/include/vectormath
+	@cp -frv $(CURDIR)/c $(DEVKITPS3)/ppu/include/vectormath
+	@cp -frv $(CURDIR)/cpp $(DEVKITPS3)/ppu/include/vectormath
 	
 clean:
 	

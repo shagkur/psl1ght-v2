@@ -112,8 +112,8 @@ clean:
 	@rm -fr $(BUILD) $(OUTPUT)
 
 install:
-	@[ -d $(PSL1GHT)/bin ] || mkdir -p $(PSL1GHT)/bin
-	@cp -frv $(OUTPUT) $(EXTRAINSTALL) $(PSL1GHT)/bin
+	@[ -d $(DEVKITPS3)/bin ] || mkdir -p $(DEVKITPS3)/bin
+	@cp -frv $(OUTPUT) $(EXTRAINSTALL) $(DEVKITPS3)/bin
 		
 #---------------------------------------------------------------------------------
 else

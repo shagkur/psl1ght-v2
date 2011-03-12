@@ -3,11 +3,11 @@
 #---------------------------------------------------------------------------------
 .SUFFIXES:
 #---------------------------------------------------------------------------------
-ifeq ($(strip $(PSL1GHT)),)
-$(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
+ifeq ($(strip $(DEVKITPS3)),)
+$(error "Please set DEVKITPS3 in your environment. export DEVKITPS3=<path>")
 endif
 
-include	$(PSL1GHT)/spu/spu_rules
+include	$(DEVKITPS3)/spu_rules
 
 BUILD		:=	build
 
@@ -57,8 +57,8 @@ spu:
 #---------------------------------------------------------------------------------
 install:
 #---------------------------------------------------------------------------------
-	@[ -d $(PSL1GHT)/spu/lib ] || mkdir -p $(PSL1GHT)/spu/lib
-	@cp -frv $(CURDIR)/lib/spu/*.a $(PSL1GHT)/spu/lib
+	@[ -d $(DEVKITPS3)/spu/lib ] || mkdir -p $(DEVKITPS3)/spu/lib
+	@cp -frv $(CURDIR)/lib/spu/*.a $(DEVKITPS3)/spu/lib
 
 #---------------------------------------------------------------------------------
 $(LIBRARY).a: $(OBJS)	

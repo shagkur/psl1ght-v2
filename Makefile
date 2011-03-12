@@ -3,8 +3,8 @@
 #---------------------------------------------------------------------------------
 .SUFFIXES:
 #---------------------------------------------------------------------------------
-ifeq ($(strip $(PSL1GHT)),)
-$(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
+ifeq ($(strip $(DEVKITPS3)),)
+$(error "Please set DEVKITPS3 in your environment. export DEVKITPS3=<path>")
 endif
 
 all:
@@ -14,12 +14,12 @@ all:
 	@make -C tools --no-print-directory
 	
 install-ctrl:
-	@[ -d $(PSL1GHT) ] || mkdir -p $(PSL1GHT)
-	@[ -d $(PSL1GHT)/ppu ] || mkdir -p $(PSL1GHT)/ppu
-	@[ -d $(PSL1GHT)/spu ] || mkdir -p $(PSL1GHT)/spu
-	@cp -frv base_rules $(PSL1GHT)
-	@cp -frv ppu_rules $(PSL1GHT)/ppu
-	@cp -frv spu_rules $(PSL1GHT)/spu
+	@[ -d $(DEVKITPS3) ] || mkdir -p $(DEVKITPS3)
+	@[ -d $(DEVKITPS3)/ppu ] || mkdir -p $(DEVKITPS3)/ppu
+	@[ -d $(DEVKITPS3)/spu ] || mkdir -p $(DEVKITPS3)/spu
+	@cp -frv base_rules $(DEVKITPS3)
+	@cp -frv ppu_rules $(DEVKITPS3)/ppu
+	@cp -frv spu_rules $(DEVKITPS3)/spu
 
 install-socat:
 	@make -C tools install-socat --no-print-directory	

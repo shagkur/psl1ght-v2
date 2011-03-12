@@ -50,7 +50,7 @@ package_finalize$(POSTFIX): package_finalize.c
 	$(CC) $< $(CFLAGS) $(LDFLAGS) -o $@
 
 install: $(TARGETS)
-	@install -m 755 $(TARGETS) $(PSL1GHT)/bin/
+	@install -m 755 $(TARGETS) $(DEVKITPS3)/bin/
 
 clean:
 	@rm -f $(TARGETS)
