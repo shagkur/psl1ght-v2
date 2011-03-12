@@ -10,9 +10,9 @@ endif
 all:
 	
 install:
-	@[ -d $(PSL1GHT)/target/ppu/include/vectormath ] || mkdir -p $(PSL1GHT)/target/ppu/include/vectormath
-	@cp -frv $(CURDIR)/c $(PSL1GHT)/target/ppu/include/vectormath
-	@cp -frv $(CURDIR)/cpp $(PSL1GHT)/target/ppu/include/vectormath
+	@[ -d $(PSL1GHT)/ppu/include/vectormath ] || mkdir -p $(PSL1GHT)/ppu/include/vectormath
+	@cp -frv $(CURDIR)/c $(PSL1GHT)/ppu/include/vectormath
+	@cp -frv $(CURDIR)/cpp $(PSL1GHT)/ppu/include/vectormath
 	
 clean:
 	

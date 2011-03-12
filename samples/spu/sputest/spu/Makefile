@@ -7,7 +7,7 @@ ifeq ($(strip $(PSL1GHT)),)
 $(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
 endif
 
-include $(PSL1GHT)/host/spu_rules
+include $(PSL1GHT)/spu/spu_rules
 
 #---------------------------------------------------------------------------------
 # TARGET is the name of the output

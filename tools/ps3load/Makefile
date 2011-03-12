@@ -113,8 +113,8 @@ clean:
 
 #---------------------------------------------------------------------------------
 install:
-	@[ -d $(PSL1GHT)/host/bin ] || mkdir -p $(PSL1GHT)/host/bin
-	@cp -frv $(OUTPUT) $(PSL1GHT)/host/bin
+	@[ -d $(PSL1GHT)/bin ] || mkdir -p $(PSL1GHT)/bin
+	@cp -frv $(OUTPUT) $(PSL1GHT)/bin
 
 #---------------------------------------------------------------------------------
 all: clean $(BUILD)

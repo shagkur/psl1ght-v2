@@ -7,7 +7,7 @@ ifeq ($(strip $(PSL1GHT)),)
 $(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
 endif
 
-include	$(PSL1GHT)/host/spu_rules
+include	$(PSL1GHT)/spu/spu_rules
 
 BUILD		:=	build
 
@@ -72,14 +72,14 @@ spu:
 #---------------------------------------------------------------------------------
 install-header:
 #---------------------------------------------------------------------------------
-	@[ -d $(PSL1GHT)/target/spu/include/simdmath ] || mkdir -p $(PSL1GHT)/target/spu/include/simdmath
-	@cp -frv $(CURDIR)/../common/simdmath.h $(PSL1GHT)/target/spu/include/simdmath
+	@[ -d $(PSL1GHT)/spu/include/simdmath ] || mkdir -p $(PSL1GHT)/spu/include/simdmath
+	@cp -frv $(CURDIR)/../common/simdmath.h $(PSL1GHT)/spu/include/simdmath
 
 #---------------------------------------------------------------------------------
 install: install-header
 #---------------------------------------------------------------------------------
-	@[ -d $(PSL1GHT)/target/spu/lib ] || mkdir -p $(PSL1GHT)/target/spu/lib
-	@cp -frv $(CURDIR)/lib/spu/*.a $(PSL1GHT)/target/spu/lib
+	@[ -d $(PSL1GHT)/spu/lib ] || mkdir -p $(PSL1GHT)/spu/lib
+	@cp -frv $(CURDIR)/lib/spu/*.a $(PSL1GHT)/spu/lib
 
 #---------------------------------------------------------------------------------
 $(LIBRARY).a: $(OBJS)	

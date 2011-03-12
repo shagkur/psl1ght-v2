@@ -41,5 +41,5 @@ clean:
 	@$(CXX) $< -o $@ $(CFLAGS)
 
 install:
-	@[ -d $(PSL1GHT)/host/bin ] || mkdir -p $(PSL1GHT)/host/bin
-	@cp -frv $(CURDIR)/$(tools) $(PSL1GHT)/host/bin
+	@[ -d $(PSL1GHT)/bin ] || mkdir -p $(PSL1GHT)/bin
+	@cp -frv $(CURDIR)/$(tools) $(PSL1GHT)/bin

@@ -1,13 +1,13 @@
-export PATH	:=	$(PSL1GHT)/host/bin:$(PSL1GHT)/host/ppu/bin:$(PATH)
+export PATH	:=	$(PSL1GHT)/bin:$(PSL1GHT)/ppu/bin:$(PATH)
 
-export PSL1GHT_INC	:=	-I$(PSL1GHT)/target/ppu/include -I$(PSL1GHT)/target/ppu/include/simdmath
-export PSL1GHT_LIB	:=	-L$(PSL1GHT)/target/ppu/lib
+export PSL1GHT_INC	:=	-I$(PSL1GHT)/ppu/include -I$(PSL1GHT)/ppu/include/simdmath
+export PSL1GHT_LIB	:=	-L$(PSL1GHT)/ppu/lib
 
 PREFIX	:=	ppu-
 
 MACHDEP =  -mhard-float -fmodulo-sched -ffunction-sections -fdata-sections
 
-include $(PSL1GHT)/host/base_rules
+include $(PSL1GHT)/base_rules
 
 PKG		:=	pkg.py
 SFO		:=	sfo.py

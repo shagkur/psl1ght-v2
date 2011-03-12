@@ -7,7 +7,7 @@ ifeq ($(strip $(PSL1GHT)),)
 $(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
 endif
 
-include $(PSL1GHT)/host/ppu_rules
+include $(PSL1GHT)/ppu/ppu_rules
 
 #---------------------------------------------------------------------------------
 # TARGET is the name of the output
@@ -39,7 +39,7 @@ LIBS	:=	-lrsx -lgcm_sys -lio -lsysutil -lrt -llv2 -lm
 # list of directories containing libraries, this must be the top level containing
 # include and lib
 #---------------------------------------------------------------------------------
-LIBDIRS	:=	$(PSL1GHT)/host/ppu
+LIBDIRS	:=	$(PSL1GHT)/ppu
 
 #---------------------------------------------------------------------------------
 # no real need to edit anything past this point unless you need to add additional

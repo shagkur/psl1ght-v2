@@ -7,7 +7,7 @@ ifeq ($(strip $(PSL1GHT)),)
 $(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
 endif
 
-include	$(PSL1GHT)/host/ppu_rules
+include	$(PSL1GHT)/ppu/ppu_rules
 
 BUILD		:=	build
 
@@ -63,14 +63,14 @@ ppu:
 #---------------------------------------------------------------------------------
 install-header:
 #---------------------------------------------------------------------------------
-	@[ -d $(PSL1GHT)/target/ppu/include/simdmath ] || mkdir -p $(PSL1GHT)/target/ppu/include/simdmath
-	@cp -frv $(CURDIR)/../common/simdmath.h $(PSL1GHT)/target/ppu/include/simdmath
+	@[ -d $(PSL1GHT)/ppu/include/simdmath ] || mkdir -p $(PSL1GHT)/ppu/include/simdmath
+	@cp -frv $(CURDIR)/../common/simdmath.h $(PSL1GHT)/ppu/include/simdmath
 
 #---------------------------------------------------------------------------------
 install: install-header
 #---------------------------------------------------------------------------------
-	@[ -d $(PSL1GHT)/target/ppu/lib ] || mkdir -p $(PSL1GHT)/target/ppu/lib
-	@cp -frv $(CURDIR)/lib/ppu/*.a $(PSL1GHT)/target/ppu/lib
+	@[ -d $(PSL1GHT)/ppu/lib ] || mkdir -p $(PSL1GHT)/ppu/lib
+	@cp -frv $(CURDIR)/lib/ppu/*.a $(PSL1GHT)/ppu/lib
 
 #---------------------------------------------------------------------------------
 $(LIBRARY).a: $(OBJS)	

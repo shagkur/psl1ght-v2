@@ -14,8 +14,8 @@ all:
 	@make -C librsx --no-print-directory
 	
 install-headers:
-	@[ -d $(PSL1GHT)/target/ppu ] || mkdir -p $(PSL1GHT)/target/ppu
-	@cp -frv include $(PSL1GHT)/target/ppu
+	@[ -d $(PSL1GHT)/ppu ] || mkdir -p $(PSL1GHT)/ppu
+	@cp -frv include $(PSL1GHT)/ppu
 	
 install: install-headers
 	@make -C crt install --no-print-directory

@@ -7,7 +7,7 @@ ifeq ($(strip $(PSL1GHT)),)
 $(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
 endif
 
-include $(PSL1GHT)/host/ppu_rules
+include $(PSL1GHT)/ppu/ppu_rules
 
 #---------------------------------------------------------------------------------
 # TARGET is the name of the output

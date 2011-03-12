@@ -7,7 +7,7 @@ ifeq ($(strip $(PSL1GHT)),)
 $(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
 endif
 
-include	$(PSL1GHT)/host/ppu_rules
+include	$(PSL1GHT)/ppu/ppu_rules
 
 BUILD		:=	build
 
@@ -55,8 +55,8 @@ ppu:
 #---------------------------------------------------------------------------------
 install:
 #---------------------------------------------------------------------------------
-	@cp -frv $(CURDIR)/ppu/lv2-*.o $(PSL1GHT)/host/ppu/ppu/lib
-	@cp -frv $(CURDIR)/lv2.ld $(PSL1GHT)/host/ppu/ppu/lib
+	@cp -frv $(CURDIR)/ppu/lv2-*.o $(PSL1GHT)/ppu/ppu/lib
+	@cp -frv $(CURDIR)/lv2.ld $(PSL1GHT)/ppu/ppu/lib
 	
 .PHONY: crts ppu install
 

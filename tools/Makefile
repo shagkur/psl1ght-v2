@@ -22,8 +22,8 @@ all:
 	@make -C ps3py --no-print-directory
 	
 install-socat:
-	@[ -d $(PSL1GHT)/host/bin ] || mkdir -p $(PSL1GHT)/host/bin
-	@cp -frv $(CURDIR)/socat/$(host)/* $(PSL1GHT)/host/bin
+	@[ -d $(PSL1GHT)/bin ] || mkdir -p $(PSL1GHT)/bin
+	@cp -frv $(CURDIR)/socat/$(host)/* $(PSL1GHT)/bin
 		
 install:
 	@make -C sprxlinker install --no-print-directory

@@ -3,6 +3,7 @@
 #---------------------------------------------------------------------------------
 .SUFFIXES:
 #---------------------------------------------------------------------------------
+export PSL1GHT=$(DEVKITPS3)
 ifeq ($(strip $(PSL1GHT)),)
 $(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
 endif
@@ -14,10 +15,12 @@ all:
 	@make -C tools --no-print-directory
 	
 install-ctrl:
-	@[ -d $(PSL1GHT)/host ] || mkdir -p $(PSL1GHT)/host
-	@cp -frv base_rules $(PSL1GHT)/host
-	@cp -frv ppu_rules $(PSL1GHT)/host
-	@cp -frv spu_rules $(PSL1GHT)/host
+	@[ -d $(PSL1GHT) ] || mkdir -p $(PSL1GHT)
+	@[ -d $(PSL1GHT)/ppu ] || mkdir -p $(PSL1GHT)/ppu
+	@[ -d $(PSL1GHT)/spu ] || mkdir -p $(PSL1GHT)/spu
+	@cp -frv base_rules $(PSL1GHT)
+	@cp -frv ppu_rules $(PSL1GHT)/ppu
+	@cp -frv spu_rules $(PSL1GHT)/spu
 
 install-socat:
 	@make -C tools install-socat --no-print-directory	
