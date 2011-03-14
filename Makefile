@@ -15,11 +15,9 @@ all:
 	
 install-ctrl:
 	@[ -d $(DEVKITPS3) ] || mkdir -p $(DEVKITPS3)
-	@[ -d $(DEVKITPS3)/ppu ] || mkdir -p $(DEVKITPS3)/ppu
-	@[ -d $(DEVKITPS3)/spu ] || mkdir -p $(DEVKITPS3)/spu
 	@cp -frv base_rules $(DEVKITPS3)
-	@cp -frv ppu_rules $(DEVKITPS3)/ppu
-	@cp -frv spu_rules $(DEVKITPS3)/spu
+	@cp -frv ppu_rules $(DEVKITPS3)
+	@cp -frv spu_rules $(DEVKITPS3)
 
 install-socat:
 	@make -C tools install-socat --no-print-directory	
