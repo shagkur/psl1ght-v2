@@ -1,3 +1,7 @@
+/*! \file event_queue.h
+ \brief Event queue management functions.
+*/
+
 #ifndef __SYS_EVENT_QUEUE_H__
 #define __SYS_EVENT_QUEUE_H__
 

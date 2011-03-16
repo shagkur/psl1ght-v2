@@ -1,3 +1,7 @@
+/*! \file mutex.h
+ \brief Mutual exclusion management.
+*/
+
 #ifndef __SYS_MUTEX_H__
 #define __SYS_MUTEX_H__
 

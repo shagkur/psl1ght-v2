@@ -1,3 +1,7 @@
+/*! \file systime.h
+ \brief System time management functions.
+*/
+
 #ifndef __SYS_SYSTIME_H__
 #define __SYS_SYSTIME_H__
 

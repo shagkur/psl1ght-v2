@@ -1,3 +1,7 @@
+/*! \file tty.h
+ \brief TTY management functions.
+*/
+
 #ifndef __SYS_TTY_H__
 #define __SYS_TTY_H__
 

@@ -1,3 +1,7 @@
+/*! \file dbg.h
+ \brief Debugging management functions.
+*/
+
 #ifndef __SYS_DBG_H__
 #define __SYS_DBG_H__
 

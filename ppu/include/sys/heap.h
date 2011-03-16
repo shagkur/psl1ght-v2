@@ -1,3 +1,7 @@
+/*! \file heap.h
+ \brief Heap management functions.
+*/
+
 #ifndef __SYS_HEAP_H__
 #define __SYS_HEAP_H__
 

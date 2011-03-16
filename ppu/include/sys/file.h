@@ -1,3 +1,7 @@
+/*! \file file.h
+ \brief File management functions.
+*/
+
 #ifndef __SYS_FILE_H__
 #define __SYS_FILE_H__
 

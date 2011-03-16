@@ -1,3 +1,7 @@
+/*! \file socket.h
+ \brief Socket management functions.
+*/
+
 #ifndef __SYS_SOCKET_H__
 #define __SYS_SOCKET_H__
 

@@ -1,3 +1,7 @@
+/*! \file lv2errno.h
+ \brief LV2 error management functions
+*/
+
 #ifndef __SYS_LV2_ERRNO_H__
 #define __SYS_LV2_ERRNO_H__
 

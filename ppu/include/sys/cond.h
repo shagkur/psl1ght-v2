@@ -1,3 +1,7 @@
+/*! \file cond.h
+ \brief Condition variables management.
+*/
+
 #ifndef __SYS_COND_H__
 #define __SYS_COND_H__
 

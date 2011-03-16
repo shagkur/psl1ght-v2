@@ -1,3 +1,9 @@
+/*! \file spu.h
+  \brief SPU management.
+
+  Another file.
+*/
+
 #ifndef __SYS_SPU_H__
 #define __SYS_SPU_H__
 
@@ -64,12 +70,13 @@
 extern "C" {
 #endif
 
+//! A structure containing the arguments passed to the SPU main function.
 typedef struct _sys_spu_thread_arg
 {
-	u64 arg0;
-	u64 arg1;
-	u64 arg2;
-	u64 arg3;
+	u64 arg0;	//!< First argument.
+	u64 arg1;	//!< Second argument.
+	u64 arg2;	//!< Third argument.
+	u64 arg3;	//!< Fourth argument.
 } sysSpuThreadArgument;
 
 typedef struct _sys_spu_thread_attr

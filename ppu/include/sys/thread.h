@@ -1,3 +1,7 @@
+/*! \file thread.h
+ \brief PPU thread management.
+*/
+
 #ifndef __SYS_THREAD_H__
 #define __SYS_THREAD_H__
 

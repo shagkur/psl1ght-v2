@@ -1,3 +1,7 @@
+/*! \file memory.h
+ \brief Memory management functions.
+*/
+
 #ifndef __SYS_MEMORY_H__
 #define __SYS_MEMORY_H__
 
