@@ -3,8 +3,8 @@
 #---------------------------------------------------------------------------------
 .SUFFIXES:
 #---------------------------------------------------------------------------------
-ifeq ($(strip $(PSL1GHT)),)
-$(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
+ifeq ($(strip $(DEVKITPS3)),)
+$(error "Please set DEVKITPS3 in your environment. export DEVKITPS3=<path>")
 endif
 
 all:
@@ -14,8 +14,8 @@ all:
 	@make -C librsx --no-print-directory
 	
 install-headers:
-	@[ -d $(PSL1GHT)/target/ppu ] || mkdir -p $(PSL1GHT)/target/ppu
-	@cp -frv include $(PSL1GHT)/target/ppu
+	@[ -d $(DEVKITPS3)/ppu ] || mkdir -p $(DEVKITPS3)/ppu
+	@cp -frv include $(DEVKITPS3)/ppu
 	
 install: install-headers
 	@make -C crt install --no-print-directory
